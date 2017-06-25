@@ -1,9 +1,17 @@
 <template>
-  <require from="./nav-bar.html"></require>
-  
-  <nav-bar router.bind="router"></nav-bar>
+  <require from="./components/header/header.html"></require>
+  <require from="./components/sidebar/sidebar.html"></require>
+  <require from="./components/content/content.html"></require>
+  <require from="./components/footer/footer.html"></require>
 
-  <div class="page-host">
-    <router-view></router-view>
+  <div class="flex-container">
+    <sidebar></sidebar>
+    <div class="main">
+      <header></header>
+      <content></content>
+      <footer></footer>
+    </div>
   </div>
+
+
 </template>
